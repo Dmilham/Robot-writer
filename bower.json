@@ -1,0 +1,20 @@
+{
+  "name": "cnc-app",
+  "description": "A hub for testing the use of a cnc for the autonomous production of physical goods.",
+  "main": "index.js",
+  "authors": [
+    "Joaquin Melara"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Icarusoncloud9/Cnc-Test-Files",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^0.97.8"
+  }
+}
