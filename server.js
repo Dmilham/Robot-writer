@@ -34,7 +34,7 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 // =============================================================
 // ROUTES
 // =============================================================
-var routes = require('./controllers/burgers_controller.js');
+var routes = require('./controllers/cnc_controller.js');
 app.use('/', routes);
 
 // =============================================================

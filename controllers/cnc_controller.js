@@ -1,33 +1,36 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
-var stack = require('../models/heaped_stack.js');
 
-router.get('/', function (req, res) {
-	res.redirect('/home');
+router.get("/", function (req, res) {
+	res.redirect("/home");
 });
 
-router.get('/home', function (req, res) {
-	burger.all(function (data) {
-		var hbsObject = { burgers: data };
-		console.log(hbsObject);
-		res.render('index', hbsObject);
-	});
+router.get("/home", function (req, res) {
+	res.render("home");
 });
 
-router.post('/burgers/create', function (req, res) {
-	burger.create(['name', 'devoured'], [req.body.name, false], function () {
-		res.redirect('/burgers');
-	});
+router.get("/user", function (req, res) {
+	res.render("simpler");
 });
 
-router.put('/burgers/update/:id', function (req, res) {
-	var condition = 'id = ' + req.params.id;
-
-	console.log('condition', condition);
-
-	burger.update({ devoured: req.body.devoured }, condition, function () {
-		res.redirect('/burgers');
-	});
+router.get("/admin", function (req, res) {
+	
+	res.render("advanced");
 });
+
+router.get("/signup", function (req, res) {
+	
+	res.render("signup");
+});
+
+router.post("/login", function (req, res) {
+	
+});
+
+router.post("/create", function (req, res) {
+	
+	console.log(req.body);
+});
+
 
 module.exports = router;
